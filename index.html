@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/emoji-toolkit@6.6.0/extras/css/joypixels.min.css"/>
+<body>
+    <input type="text" id="inputText" name="inputText" value="😄 😏 :smile:">
+    <input type="button" value="Convert" onclick="emogif()"/>
+    <p id="outputText"></p>
+    <script type="text/javascript">
+    function emogif() {
+        var input = document.getElementById('inputText').value;
+        joypixels.emojiSize = 128;
+        var output = joypixels.toImage(input);
+        document.getElementById('outputText').innerHTML = output;
+    }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/emoji-toolkit@6.6.0/lib/js/joypixels.min.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/gif.js.optimized@1.0.1/dist/gif.js"></script>
+</body>
+</html>
