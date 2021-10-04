@@ -11,9 +11,29 @@
         joypixels.emojiSize = 128;
         var output = joypixels.toImage(input);
         document.getElementById('outputText').innerHTML = output;
+
+        var imgs = document.getElementById('outputText').getElementsByTagName('img');
+
+        var imgSrcs = [];
+
+        for (var i = 0; i < imgs.length; i++) {
+            imgSrcs.push(imgs[i].src);
+        }
+
+        gifshot.createGIF({
+            'images': imgSrcs
+        },function(obj) {
+        if(!obj.error) {
+            var image = obj.image,
+            animatedImage = document.createElement('img');
+            animatedImage.src = image;
+            document.body.appendChild(animatedImage);
+        }
+        });
+
     }
     </script>
     <script src="https://cdn.jsdelivr.net/npm/emoji-toolkit@6.6.0/lib/js/joypixels.min.js"></script>
-    <script type="text/javascript" src="https://unpkg.com/gif.js.optimized@1.0.1/dist/gif.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gifshot/0.1.1/gifshot.min.js" integrity="sha512-+csm+2+W6RQtuoRwUZOy638PnlmGpCWwqLq9GAfvWq+c+i8Bn2hM8iNJ6152lltEnbtLNJ+JhrXPZA+EkF8xoQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </body>
 </html>
