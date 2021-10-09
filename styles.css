@@ -1,0 +1,49 @@
+.bg{
+    background-image: url('brick-wall.png');
+    background-color: #fff;
+    background-repeat: repeat;
+}
+
+
+div[contenteditable=true] {
+    border: 1px dashed black;
+    width: 290px;
+    padding: 5px;
+    min-height: 2.25em;
+}
+[contenteditable=true]:empty:before {
+    content: attr(placeholder);
+    pointer-events: none;
+    display: block; /* For Firefox */
+}
+
+h1{
+    font-family: 'Akronim', cursive;
+    letter-spacing: 0.1em;
+    font-weight: bold;
+    
+}
+p{
+    font-family: 'Spectral', serif;
+    margin-bottom: 10px;
+}
+.btn{
+    font-family: 'Spectral', serif;
+}
+.bt :hover{
+    color: black;
+}
+
+.footer p{
+    font-family: 'Spectral', serif;
+    font-weight: bold;
+    margin-top: 12px;
+    letter-spacing: 0.05em;
+}
+a{
+    color:grey;
+    text-decoration: none;
+}
+ a:hover{
+    color: #47420B !important;
+}
