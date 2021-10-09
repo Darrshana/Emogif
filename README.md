@@ -4,6 +4,8 @@
 
 emojis into gif, just as the repo name states
 
+![emogif](https://user-images.githubusercontent.com/24373162/136667703-3dc30c9b-0609-4f76-93b1-55f3e99a3ab0.gif)
+
 ## Prerequisites
 
 To use this website the following is what you'll have to do.
