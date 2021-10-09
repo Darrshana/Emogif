@@ -65,6 +65,7 @@
                 return;
             }
             joypixels.emojiSize = 128;
+            joypixels.imagePathPNG = '/assets/';
             var output = joypixels.toImage(input);
             document.getElementById('outputText').innerHTML = output;
             var imgs = document.getElementById('outputText').getElementsByTagName('img');
