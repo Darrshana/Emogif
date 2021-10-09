@@ -20,7 +20,7 @@ And. There is one more even easier way to access it. Just click on [this hyperli
 
 ## Why this ?
 
-This model was created because of one [Darrshana](https://github.com/Darrshana) who wanted to use multiple emojis in sequence, to easily convey with others. So, thus incepted the idea of making gifs out of the emojis typed out.
+This model was created because of one [Darrshana](https://github.com/Darrshana) and [Ben Stewart](https://github.com/sbenstewart) who wanted to use multiple emojis in sequence, to easily convey with others. So, thus incepted the idea of making gifs out of the emojis typed out.
 
 ## How this ?
 
