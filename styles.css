@@ -6,10 +6,10 @@
 
 
 div[contenteditable=true] {
-    border: 1px dashed black;
-    width: 290px;
-    padding: 5px;
-    min-height: 2.25em;
+    /* border: 1px dashed black !important; */
+    /* width: 25% !important;  */
+    /* padding: 5px; */
+    min-height: 2em !important; 
 }
 [contenteditable=true]:empty:before {
     content: attr(placeholder);
@@ -47,3 +47,14 @@ a{
  a:hover{
     color: #47420B !important;
 }
+@media only screen and (min-width: 780px){
+    .emojionearea{
+        width: 25% !important;
+    }   
+}
+@media only screen and (max-width: 779px){
+    .emojionearea{
+        width: 70% !important;
+    }   
+}
+

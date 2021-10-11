@@ -25,17 +25,16 @@
 </head>
 
 <body onload="emogif()" class="bg">
-    <div class="container min-vh-95 justify-content-center align-items-center">
+    <div class="container min-vh-90 justify-content-center align-items-center">
         <div class="row" style="min-height: 40vh;">
             <div class="d-flex flex-column justify-content-center align-items-center">
                 <h1 class="mt-5">EMOGIF</h1>
                 <p>Create gifs out of emojis!</p>
-                
                 <div id="inputText" name="inputText" contenteditable="true">😄 😏 :smile:</div>
                 <input type="button" id="inputBtn" class="btn btn-dark m-4 active"  onclick="emogif()" value="Convert">
             </div>
         </div>
-        <div class="row" style="min-height: 45vh;">
+        <div class="row" style="min-height: 40vh;">
             <div class="d-flex flex-column justify-content-center align-items-center">
                 <p id="outputText" class="bg"></p>
                 <p id="outputGif"></p>
@@ -101,7 +100,8 @@
             $("#inputText").emojioneArea({
                 pickerPosition: "bottom",
                 tonesStyle: "bullet",
-                shortnames: false
+                shortnames: false,
+                
             });
         })
     </script>
