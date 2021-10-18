@@ -26,14 +26,10 @@
 
 <body  class="bg">
   <div class="lc">
-    <div class="loader">
-        <div class="loader__bar"></div>
-        <div class="loader__bar"></div>
-        <div class="loader__bar"></div>
-        <div class="loader__bar"></div>
-        <div class="loader__bar"></div>
-        <div class="loader__ball"></div>
-      </div> </div>
+    <div class="leftEye"></div>
+    <div class="rightEye"></div>
+    <div class="mouth"></div>
+     </div>
     
     <div class="container min-vh-90 justify-content-center align-items-center">
         <div class="row" style="min-height: 40vh;">
@@ -127,10 +123,12 @@
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script>
       document.onreadystatechange = function() {
+        function delay () {
+        setTimeout( function() { window.location = "index.html" }, 50000 );
+    }  
     if (document.readyState !== "complete") {
+        
         document.querySelector("body").style.visibility = "hidden";
-        // document.querySelector("body").removeClass(".bg");
-        // document.querySelector("body").addClass(".lc");
         document.querySelector(".lc").style.visibility = "visible";
     } else {
         document.querySelector(".lc").style.display = "none";
