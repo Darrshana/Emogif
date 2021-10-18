@@ -24,7 +24,17 @@
     <script type="text/javascript" src="https://cdn.rawgit.com/mervick/emojionearea/master/dist/emojionearea.min.js"></script>
 </head>
 
-<body onload="emogif()" class="bg">
+<body  class="bg">
+  <div class="lc">
+    <div class="loader">
+        <div class="loader__bar"></div>
+        <div class="loader__bar"></div>
+        <div class="loader__bar"></div>
+        <div class="loader__bar"></div>
+        <div class="loader__bar"></div>
+        <div class="loader__ball"></div>
+      </div> </div>
+    
     <div class="container min-vh-90 justify-content-center align-items-center">
         <div class="row" style="min-height: 40vh;">
             <div class="d-flex flex-column justify-content-center align-items-center">
@@ -104,8 +114,9 @@
                 
             });
         })
+        
     </script>
-   
+    
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
@@ -114,6 +125,24 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gifshot/0.1.1/gifshot.min.js"
         integrity="sha512-+csm+2+W6RQtuoRwUZOy638PnlmGpCWwqLq9GAfvWq+c+i8Bn2hM8iNJ6152lltEnbtLNJ+JhrXPZA+EkF8xoQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script>
+      document.onreadystatechange = function() {
+    if (document.readyState !== "complete") {
+        document.querySelector("body").style.visibility = "hidden";
+        // document.querySelector("body").removeClass(".bg");
+        // document.querySelector("body").addClass(".lc");
+        document.querySelector(".lc").style.visibility = "visible";
+    } else {
+        document.querySelector(".lc").style.display = "none";
+        document.querySelector("body").style.visibility = "visible";
+    }
+};
+
+  </script>     
+    <script>
+        window.onload = emogif();
+    </script>
+  
 </body>
-    
+  
 </html>
