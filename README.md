@@ -26,8 +26,13 @@ This model was created because of one [Darrshana](https://github.com/Darrshana) 
 
 The tech stuff used are as follows:
 
-1. [JoyPixels](https://www.joypixels.com/) to convert the emoji to images, and it also lets you convert :smile: to 😄.
+1. [JoyPixels](https://www.joypixels.com/) to convert the emoji to images, and it also lets you convert `:smile:` to 😄.
 2. [GifShot](https://github.com/yahoo/gifshot) to convert the images into a gif.
+3. [ImageMagick](https://imagemagick.org/index.php) to remove the white background of all the emoji images with the following command. 
+```
+cd assets
+for i in *.png; do convert -flatten $i $i; done
+```
 
 ## Contributing
 To contribute, follow these steps:
