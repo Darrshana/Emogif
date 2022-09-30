@@ -45,6 +45,7 @@
                 <p id="outputText" class="bg"></p>
                 <p id="outputGif"></p>
                 <button class="btn" onclick="download()"><i class="fa fa-download c"></i> Download</button>
+                <button class="btn" onclick="copy()"><i class="fa fa-share-alt c"></i> Share</button>
             </div>
         </div>
     </div>
@@ -102,13 +103,44 @@
                 document.body.removeChild(link);
             }
         }
+        String.prototype.hexEncode = function(){
+            var hex, i;
+            var result = "";
+            for (i=0; i<this.length; i++) {
+                hex = this.charCodeAt(i).toString(16);
+                result += ("000"+hex).slice(-4);
+            }
+            return result
+        }
+        String.prototype.hexDecode = function(){
+            var j;
+            var hexes = this.match(/.{1,4}/g) || [];
+            var back = "";
+            for(j = 0; j<hexes.length; j++) {
+                back += String.fromCharCode(parseInt(hexes[j], 16));
+            }
+            return back;
+        }
+        function copy() {
+            const url = new URL(window.location.href);
+            var input = document.getElementById('inputText').textContent;
+            url.searchParams.set('emogif', input.hexEncode());
+            navigator.clipboard.writeText(url.toString());
+            alert("Link copied.")
+        }
         $(document).ready(function() {
+            const url = new URL(window.location.href);
+            var input = url.searchParams.get('emogif');
+            if(!(input == null || input == undefined || input == 0)) {
+                document.getElementById('inputText').textContent = input.hexDecode();
+            }
             $("#inputText").emojioneArea({
                 pickerPosition: "bottom",
                 tonesStyle: "bullet",
                 shortnames: false,
                 
             });
+            emogif();
         })
         
     </script>
@@ -136,10 +168,7 @@
     }
 };
 
-  </script>     
-    <script>
-        window.onload = emogif();
-    </script>
+  </script>
   
 </body>
   
