@@ -29,6 +29,7 @@ The tech stuff used are as follows:
 1. [JoyPixels](https://www.joypixels.com/) to convert the emoji to images, and it also lets you convert `:smile:` to 😄.
 2. [GifShot](https://github.com/yahoo/gifshot) to convert the images into a gif.
 3. [ImageMagick](https://imagemagick.org/index.php) to remove the white background of all the emoji images with the following command. 
+4. [Toastr](https://codeseven.github.io/toastr/) to show the pop up notification for copying link to share.
 ```
 cd assets
 for i in *.png; do convert -flatten $i $i; done
